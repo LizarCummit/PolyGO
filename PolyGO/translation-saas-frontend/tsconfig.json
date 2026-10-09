@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",                            // Targeting modern JS version
+    "lib": ["dom", "dom.iterable", "esnext"],      // Using DOM and latest ECMAScript features
+    "allowJs": true,                               // Allows JavaScript files in the project
+    "skipLibCheck": true,                          // Skips type checking of declaration files
+    "strict": true,                                // Enables strict type-checking
+    "noEmit": true,                                // Prevents output of compiled JS
+    "esModuleInterop": true,                       // Allows default imports from non-ES modules
+    "module": "esnext",                            // Using latest module system
+    "moduleResolution": "bundler",                 // Recommended resolution strategy for Next.js
+    "resolveJsonModule": true,                     // Enables importing `.json` files
+    "isolatedModules": true,                       // Required for Next.js
+    "jsx": "preserve",                             // JSX is preserved for Next.js to compile
+    "incremental": true,                           // Speeds up builds by using incremental compilation
+    "plugins": [
+      {
+        "name": "next"                             // Adds Next.js plugin
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"],                          // Allows using "@/..." for things in /src
+      "@components/*": ["./components/*"]          // Allows using "@components/..." for /components folder
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}

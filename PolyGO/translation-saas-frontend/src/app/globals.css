@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== General Styles ===== */
+body {
+  @apply bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+}
+
+/* Smooth fade-in animation for sections */
+.fade-in {
+  @apply opacity-0 transform translate-y-5 transition-opacity transition-transform duration-700 ease-out;
+}
+
+.fade-in-visible {
+  @apply opacity-100 transform translate-y-0;
+}
+
+/* Button hover effect */
+.btn-hover {
+  @apply transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg;
+}
+
+/* Main Container for better layout */
+.container {
+  @apply max-w-6xl mx-auto px-6 md:px-12 lg:px-16;
+}
+
+/* Modern Typography Styles */
+h1 {
+  @apply text-5xl font-extrabold text-center mt-10 text-gray-900 dark:text-gray-100;
+}
+
+h2 {
+  @apply text-3xl font-bold mb-6 text-gray-700 dark:text-gray-300;
+}
+
+h3 {
+  @apply text-2xl font-semibold mb-4 text-gray-600 dark:text-gray-300;
+}
+
+/* Page Fade-in Transition */
+.page-transition {
+  @apply opacity-0 transition-opacity duration-700 ease-in-out;
+}
+
+.page-transition-visible {
+  @apply opacity-100;
+}
+
+/* Custom Cards */
+.card {
+  @apply bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 transition-all duration-300 hover:shadow-lg;
+}
+
+/* Input & Textarea Styling */
+.input {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white dark:border-gray-600;
+}
+
+.textarea {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white dark:border-gray-600;
+}
+
+/* Select Dropdown Styling */
+.select {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm bg-white dark:bg-gray-700 dark:text-white dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+/* Buttons */
+.btn {
+  @apply inline-block px-5 py-2 font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.btn-success {
+  @apply bg-green-600 hover:bg-green-700 focus:ring-green-500;
+}
+
+.btn-danger {
+  @apply bg-red-600 hover:bg-red-700 focus:ring-red-500;
+}
+
+.btn-secondary {
+  @apply bg-gray-600 hover:bg-gray-700 focus:ring-gray-500;
+}
+
+/* Recording Status Indicator */
+.recording-status {
+  @apply flex items-center space-x-2 text-red-600 font-semibold;
+}
+
+.recording-status .dot {
+  @apply w-3 h-3 bg-red-600 rounded-full animate-pulse;
+}
+
+/* Dark Mode Support for UI Components */
+.dark-mode {
+  @apply bg-gray-900 text-gray-100;
+}
+
+/* Keyframes for Smooth Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fix autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #000 !important;
+  box-shadow: 0 0 0 30px white inset !important;
+  color: #000 !important;
+  caret-color: #000 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Dark mode autofill styles */
+.dark input:-webkit-autofill,
+.dark input:-webkit-autofill:hover,
+.dark input:-webkit-autofill:focus,
+.dark input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #1f2937 inset !important;
+  -webkit-text-fill-color: #fff !important;
+  box-shadow: 0 0 0 30px #1f2937 inset !important;
+  color: #fff !important;
+  caret-color: #fff !important;
+}
+
+/* Ensure consistent text color in light mode */
+[color-scheme="light"] {
+  color-scheme: light;
+  background-color: white !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+/* Force light background for inputs */
+input.appearance-none {
+  background-color: white !important;
+}

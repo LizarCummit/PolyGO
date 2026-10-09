@@ -1,0 +1,14 @@
+{
+  "name": "polygo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PolyGO: AI lecture assistant (speech-to-text, translation, plain-language explanations)",
+  "scripts": {
+    "backend": "pnpm --filter translation-saas-backend start",
+    "frontend": "pnpm --filter translation-saas-frontend dev",
+    "dev": "concurrently \"pnpm backend\" \"pnpm frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

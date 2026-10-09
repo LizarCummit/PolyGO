@@ -1,0 +1,30 @@
+# dependencies
+node_modules/
+
+# secrets and credentials: never commit these
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.crt
+config/*.json
+service-account*.json
+*-credentials.json
+
+# user uploads and generated media
+translation-saas-backend/uploads/
+*.wav
+*.mp3
+*.m4a
+
+# build output and caches
+.next/
+dist/
+coverage/
+*.log
+
+# editor / OS
+.vscode/
+.DS_Store
